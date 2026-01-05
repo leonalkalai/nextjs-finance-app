@@ -1,7 +1,6 @@
-import Image from "next/image";
+// app/page.js
+import LandingPage from "@/components/LandingPage";
 
-export default function Home() {
-  return (
-     <>Hello</> 
-  );
+export default async function Home() {
+  return <LandingPage />;
 }

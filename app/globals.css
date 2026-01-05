@@ -12,7 +12,8 @@
 @layer base {
   /* Body styles */
   body {
-    @apply container mx-auto max-w-4xl bg-white text-black;
+    /* @apply container mx-auto max-w-4xl bg-white text-black; */
+    @apply bg-white text-black;
   }
 
   /* Dark mode for body */

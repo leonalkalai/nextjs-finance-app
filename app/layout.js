@@ -26,7 +26,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en" className={theme}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col px-8`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased mx-auto min-h-screen flex flex-col`}
       >
         <Providers>{children}</Providers>
       </body>

@@ -1,26 +1,49 @@
 @import "tailwindcss";
+/* css-validate-disable-next-line */
+@plugin "@tailwindcss/forms";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* body {
+ @apply container mx-auto max-w-4xl bg-white text-black dark:bg-slate-950 dark:text-slate-100
+} */
+
+@layer base {
+  /* Body styles */
+  body {
+    @apply container mx-auto max-w-4xl bg-white text-black;
   }
+
+  /* Dark mode for body */
+  .dark body {
+    @apply bg-slate-950 text-slate-100;
+  }
+
+
+/* Default Select styles */
+  select {
+    @apply border rounded-md p-2 bg-white text-black dark:bg-gray-900 dark:text-white;
+  }
+
+  /* Disabled select styles for light theme */
+  select:disabled {
+    @apply bg-gray-200 text-gray-500 cursor-not-allowed opacity-50;
+  }
+
+  /* Disabled select styles for dark theme */
+  .dark select:disabled {
+    @apply bg-gray-700 text-gray-400 cursor-not-allowed opacity-50;
+  }
+
+  /* Optional: disabled input styles too */
+  input:disabled {
+    @apply bg-gray-200 text-gray-500 cursor-not-allowed opacity-50;
+  }
+  .dark input:disabled {
+    @apply bg-gray-700 text-gray-400 cursor-not-allowed opacity-50;
+  }
+
+  
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}

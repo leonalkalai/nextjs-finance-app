@@ -1,0 +1,8 @@
+{
+  "atDirectives": [
+    { "name": "plugin" },
+    { "name": "apply" },
+    { "name": "config" },
+    { "name": "tailwind" }
+  ]
+}
